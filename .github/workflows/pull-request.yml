@@ -1,0 +1,50 @@
+name: Pull-Request
+
+on:
+  pull_request:
+    branches: [ "develop" ]
+
+jobs:
+  auto-assign:
+    name: Auto Assign
+    runs-on: ubuntu-latest
+    steps:
+      - name: Auto Assign
+        uses: kentaro-m/auto-assign-action@master
+        with:
+          configuration-path: '.github/assign_config.yml'
+
+  build:
+    name: Check Build Test
+    runs-on: ubuntu-latest
+    steps:
+    - name: git checkout
+      uses: actions/checkout@v3
+    
+    - name: set up JDK 17
+      uses: actions/setup-java@v3
+      with:
+        java-version: '17'
+        distribution: 'temurin'
+        cache: gradle
+
+    - name: Grant execute permission for gradlew
+      run: chmod +x gradlew
+
+    - name: Build with Gradle
+      uses: gradle/gradle-build-action@v2
+      with:
+        arguments: :app:assembleDebug
+
+  ktlint:
+    name: Check Code Quality
+    runs-on: ubuntu-latest
+    steps:
+      - name: git checkout
+        uses: actions/checkout@v3
+
+      - name: ktlint
+        uses: ScaCap/action-ktlint@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          reporter: github-pr-review # Change reporter
