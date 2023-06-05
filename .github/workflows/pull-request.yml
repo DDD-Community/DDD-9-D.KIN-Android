@@ -5,6 +5,15 @@ on:
     branches: [ "develop" ]
 
 jobs:
+  auto-assign:
+    name: Auto Assign
+    runs-on: ubuntu-latest
+    steps:
+      - name: Auto Assign
+        uses: kentaro-m/auto-assign-action@master
+        with:
+          configuration-path: '.github/assign_config.yml'
+
   build:
     name: Check Build Test
     runs-on: ubuntu-latest
@@ -37,5 +46,5 @@ jobs:
       - name: ktlint
         uses: ScaCap/action-ktlint@master
         with:
-          github_token: ${{ secrets.github_token }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           reporter: github-pr-review # Change reporter

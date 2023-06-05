@@ -1,0 +1,21 @@
+# pull 요청에 검토자를 추가하려면 true로 설정합니다. 
+addReviewers : true
+
+# 담당자를 pull 요청에 추가하려면 true로 설정 
+# addAssignees: true
+# PR 작성자를 양수인으로 설정하려면 addAssignee를 'author'로 설정합니다. 
+addAssignees: author
+
+# pull 요청에 추가할 검토자 목록(GitHub 사용자 이름) 
+reviewers :
+  - kts6056 
+  - dream-data-lost
+
+# 풀 리퀘스트에 추가된 리뷰어의 수 
+# 모든 리뷰어를 추가하려면 0으로 설정(기본값: 0) 
+numberOfReviewers : 0 
+
+# 풀 요청에 추가할 담당자 수 
+# 모든 담당자를 추가하려면 0으로 설정합니다. 
+# 설정하지 않으면 numberOfReviewers를 사용합니다. 
+numberOfAssignee: 0
