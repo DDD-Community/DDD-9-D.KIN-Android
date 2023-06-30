@@ -13,5 +13,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "D.KIN"
+rootProject.name = "Chevit"
 include(":app")

@@ -1,4 +1,4 @@
-package kr.dkin.app
+package com.chevit.app
 
 import org.junit.Assert.assertEquals
 import org.junit.Test

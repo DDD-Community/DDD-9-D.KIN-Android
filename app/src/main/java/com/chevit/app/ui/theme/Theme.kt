@@ -1,4 +1,4 @@
-package kr.dkin.app.ui.theme
+package com.chevit.app.ui.theme
 
 import android.app.Activity
 import android.os.Build

@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    namespace = "kr.dkin.app"
+    namespace = "com.chevit.app"
     compileSdk = 33
 
     defaultConfig {
-        applicationId = "kr.dkin.app"
+        applicationId = "com.chevit.app"
         minSdk = 24
         targetSdk = 33
         versionCode = 1

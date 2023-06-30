@@ -1,4 +1,4 @@
-package kr.dkin.app
+package com.chevit.app
 
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry
@@ -17,6 +17,6 @@ class ExampleInstrumentedTest {
     fun useAppContext() {
         // Context of the app under test.
         val appContext = InstrumentationRegistry.getInstrumentation().targetContext
-        assertEquals("kr.dkin.app", appContext.packageName)
+        assertEquals("com.chevit.app", appContext.packageName)
     }
 }
