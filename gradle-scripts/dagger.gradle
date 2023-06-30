@@ -1,0 +1,6 @@
+apply plugin: "kotlin-kapt"
+
+dependencies {
+    implementation libs.dagger.core
+    kapt libs.dagger.compiler
+}

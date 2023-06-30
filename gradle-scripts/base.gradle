@@ -1,0 +1,40 @@
+android {
+    compileSdkVersion Integer.parseInt(project.compileSdk)
+
+    defaultConfig {
+        targetSdkVersion Integer.parseInt(project.targetSdk)
+        minSdkVersion Integer.parseInt(project.minSdk)
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        debug {
+            debuggable true
+            minifyEnabled false
+        }
+        release {
+            debuggable false
+            minifyEnabled true
+        }
+    }
+
+    buildTypes {
+        debug {
+            debuggable true
+            minifyEnabled false
+        }
+        release {
+            debuggable false
+            minifyEnabled true
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8.toString()
+    }
+}

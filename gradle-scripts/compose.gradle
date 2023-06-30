@@ -1,0 +1,20 @@
+android {
+    buildFeatures {
+        compose = true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion = "1.4.3"
+    }
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8.toString()
+    }
+}
+
+dependencies {
+    implementation(platform(libs.compose.bom))
+    implementation(libs.compose.activity)
+    implementation(libs.compose.ui)
+    implementation(libs.compose.uiGraphics)
+    implementation(libs.compose.uiToolingPreview)
+    implementation(libs.compose.material3)
+}

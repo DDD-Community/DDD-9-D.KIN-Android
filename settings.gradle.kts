@@ -15,3 +15,8 @@ dependencyResolutionManagement {
 
 rootProject.name = "Chevit"
 include(":app")
+include(":core")
+include(":domain")
+include(":data")
+include(":presentation:auth")
+include(":presentation:home")
