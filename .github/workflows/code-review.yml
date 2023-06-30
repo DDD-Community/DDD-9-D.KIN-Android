@@ -1,4 +1,4 @@
-name: Code Review
+name: code-review
 
 permissions:
   contents: read
