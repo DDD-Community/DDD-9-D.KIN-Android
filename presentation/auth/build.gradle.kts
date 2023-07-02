@@ -11,7 +11,7 @@ apply(from = project.rootProject.file("gradle-scripts/serialization.gradle"))
 apply(from = project.rootProject.file("gradle-scripts/navigation.gradle"))
 
 android {
-    namespace = "com.chevit.presentation.auth"
+    namespace = "com.dkin.chevit.presentation.auth"
 }
 
 dependencies {

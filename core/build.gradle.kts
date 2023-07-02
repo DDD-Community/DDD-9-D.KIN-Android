@@ -7,7 +7,7 @@ plugins {
 apply(from = project.rootProject.file("gradle-scripts/base.gradle"))
 
 android {
-    namespace = "com.chevit.core"
+    namespace = "com.dkin.chevit.core"
 }
 
 dependencies {

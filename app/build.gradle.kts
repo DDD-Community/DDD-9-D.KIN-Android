@@ -11,10 +11,10 @@ apply(from = project.rootProject.file("gradle-scripts/serialization.gradle"))
 apply(from = project.rootProject.file("gradle-scripts/navigation.gradle"))
 
 android {
-    namespace = "com.chevit.app"
+    namespace = "com.dkin.chevit.app"
 
     defaultConfig {
-        applicationId = "com.chevit.app"
+        applicationId = "com.dkin.chevit"
         versionCode = 1
         versionName = "1.0"
     }

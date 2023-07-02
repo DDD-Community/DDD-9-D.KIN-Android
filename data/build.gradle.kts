@@ -8,7 +8,7 @@ apply(from = project.rootProject.file("gradle-scripts/base.gradle"))
 apply(from = project.rootProject.file("gradle-scripts/hilt.gradle"))
 
 android {
-    namespace = "com.chevit.data"
+    namespace = "com.dkin.chevit.data"
 }
 
 dependencies {

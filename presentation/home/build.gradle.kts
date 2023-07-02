@@ -11,7 +11,7 @@ apply(from = project.rootProject.file("gradle-scripts/serialization.gradle"))
 apply(from = project.rootProject.file("gradle-scripts/navigation.gradle"))
 
 android {
-    namespace = "com.chevit.presentation.home"
+    namespace = "com.dkin.chevit.presentation.home"
 }
 
 dependencies {
@@ -22,4 +22,6 @@ dependencies {
     implementation(libs.bundles.androidx.lifecycle)
     implementation(libs.bundles.androidx.navigation)
     implementation(libs.bundles.compose)
+
+    implementation(project(":core"))
 }
