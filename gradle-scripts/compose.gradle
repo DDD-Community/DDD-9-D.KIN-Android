@@ -6,7 +6,7 @@ android {
         kotlinCompilerExtensionVersion = "1.4.3"
     }
     kotlinOptions {
-        jvmTarget = JavaVersion.VERSION_1_8.toString()
+        jvmTarget = JavaVersion.VERSION_17.toString()
     }
 }
 
