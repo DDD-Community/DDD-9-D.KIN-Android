@@ -19,7 +19,7 @@ android {
         versionName = "1.0"
 
         manifestPlaceholders["auth0Domain"] = "team-d-kin.jp.auth0.com"
-        manifestPlaceholders["auth0Scheme"] = "com.dkin.chevit"
+        manifestPlaceholders["auth0Scheme"] = "chevit"
     }
 
     buildTypes {
@@ -39,4 +39,8 @@ dependencies {
     implementation(project(":data"))
     implementation(project(":presentation:auth"))
     implementation(project(":presentation:home"))
+
+    implementation(libs.auth0.android)
+
+    implementation(libs.androidx.startup)
 }

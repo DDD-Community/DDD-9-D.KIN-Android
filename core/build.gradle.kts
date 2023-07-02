@@ -13,4 +13,7 @@ android {
 dependencies {
     implementation(libs.bundles.kotlin)
     implementation(libs.bundles.kotlin.coroutine)
+
+    implementation(libs.bundles.androidx.base)
+    implementation(libs.bundles.androidx.lifecycle)
 }

@@ -1,26 +1,40 @@
 [versions]
+# Plugin
 ksp = "1.8.10-1.0.9"
 androidGradlePlugin = "8.0.2"
+
+# Kotlin
 kotlin = "1.8.10"
 coroutines = "1.6.4"
-lifecycle = "2.5.1"
+
+# AndroidX
 ktx = "1.9.0"
-compose-bom = "2023.04.01"
+lifecycle = "2.5.1"
 accompanist = "0.28.0"
-navigation = "2.5.3"
 appCompat = "1.6.1"
+activity = "1.6.1"
+fragment = "1.5.5"
 recyclerView = "1.2.1"
+navigation = "2.5.3"
+startup = "1.1.1"
+
+# Compose
+compose-bom = "2023.04.01"
+
+# DI
 hilt = "2.44.2"
 hiltExt = "1.0.0"
 dagger = "2.44"
+
+# Network
 okhttp = "4.10.0"
 retrofit = "2.9.0"
-espresso = "3.5.0"
-activity = "1.6.1"
-fragment = "1.5.5"
 
 # Auth
 auth0 = "2.9.3"
+
+# Logger
+timber = "5.0.1"
 
 [libraries]
 #Kotlin
@@ -36,9 +50,9 @@ androidx-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "ktx"
 androidx-activity = { module = "androidx.activity:activity-ktx", version.ref = "activity" }
 androidx-fragment = { module = "androidx.fragment:fragment-ktx", version.ref = "fragment" }
 androidx-appcompat = { module = "androidx.appcompat:appcompat", version.ref = "appCompat" }
-androidx-material = { group = "androidx.compose.material3", name = "material3" }
 androidx-constraintLayout = { module = "androidx.constraintlayout:constraintlayout", version = "2.1.4" }
 androidx-recyclerView = { module = "androidx.recyclerview:recyclerview", version.ref = "recyclerView" }
+androidx-startup = { module = "androidx.startup:startup-runtime", version.ref = "startup" }
 
 #Compose
 compose-bom = { module = "androidx.compose:compose-bom", version.ref = "compose-bom" }
@@ -88,6 +102,9 @@ hilt-ext-work = { group = "androidx.hilt", name = "hilt-work", version.ref = "hi
 #Auth
 auth0-android = { group = "com.auth0.android", name = "auth0", version.ref = "auth0" }
 
+#Logger
+logger-timber = { group = "com.jakewharton.timber", name = "timber", version.ref = "timber" }
+
 [plugins]
 com-android-application = { id = "com.android.application", version.ref = "androidGradlePlugin" }
 com-android-library = { id = "com.android.library", version.ref = "androidGradlePlugin" }
@@ -119,7 +136,6 @@ androidx-base = [
     "androidx-activity",
     "androidx-fragment",
     "androidx-appcompat",
-    "androidx-material",
     "androidx-constraintLayout",
     "androidx-recyclerView"
 ]

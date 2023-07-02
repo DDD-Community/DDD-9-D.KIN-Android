@@ -15,6 +15,8 @@ android {
 }
 
 dependencies {
+    implementation(project(":core"))
+
     implementation(libs.bundles.kotlin)
     implementation(libs.bundles.kotlin.coroutine)
 

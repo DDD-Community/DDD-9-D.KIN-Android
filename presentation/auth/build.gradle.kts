@@ -15,12 +15,12 @@ android {
 }
 
 dependencies {
+    implementation(project(":core"))
+
     implementation(libs.bundles.kotlin)
     implementation(libs.bundles.kotlin.coroutine)
 
     implementation(libs.bundles.androidx.base)
     implementation(libs.bundles.androidx.lifecycle)
     implementation(libs.bundles.compose)
-
-    implementation(libs.auth0.android)
 }

@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Chevit</string>
+
+    <string name="com_auth0_client_id">7jUknnTOGtHzEzc9hFwmNQQodkffp6Em</string>
+    <string name="com_auth0_domain">team-d-kin.jp.auth0.com</string>
+    <string name="com_auth0_scheme">chevit</string>
 </resources>
