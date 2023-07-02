@@ -12,6 +12,8 @@ android {
 }
 
 dependencies {
+    implementation(project(":domain"))
+
     implementation(libs.bundles.kotlin)
     implementation(libs.bundles.kotlin.coroutine)
     implementation(libs.bundles.okhttp)

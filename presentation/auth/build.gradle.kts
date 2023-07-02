@@ -21,4 +21,6 @@ dependencies {
     implementation(libs.bundles.androidx.base)
     implementation(libs.bundles.androidx.lifecycle)
     implementation(libs.bundles.compose)
+
+    implementation(libs.auth0.android)
 }

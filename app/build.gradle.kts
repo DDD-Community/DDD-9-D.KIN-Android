@@ -17,6 +17,9 @@ android {
         applicationId = "com.dkin.chevit"
         versionCode = 1
         versionName = "1.0"
+
+        manifestPlaceholders["auth0Domain"] = "team-d-kin.jp.auth0.com"
+        manifestPlaceholders["auth0Scheme"] = "com.dkin.chevit"
     }
 
     buildTypes {
