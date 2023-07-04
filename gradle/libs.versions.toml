@@ -86,7 +86,7 @@ okhttp-test = { group = "com.squareup.okhttp3", name = "mockwebserver", version.
 #Retrofit
 retrofit-core = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit" }
 retrofit-coroutines = { group = "com.jakewharton.retrofit", name = "retrofit2-kotlin-coroutines-adapter", version = "0.9.2" }
-retrofit-serialization = { group = "com.jakewharton.retrofit", name = "retrofit2-kotlinx-serialization-converter", version = "0.8.0" }
+retrofit-serialization = { group = "com.jakewharton.retrofit", name = "retrofit2-kotlinx-serialization-converter", version = "1.0.0" }
 
 #Dagger
 dagger-core = { group = "com.google.dagger", name = "dagger", version.ref = "dagger" }
