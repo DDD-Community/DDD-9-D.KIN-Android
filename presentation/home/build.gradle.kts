@@ -16,14 +16,6 @@ android {
 
 dependencies {
     implementation(project(":core"))
-
-    implementation(libs.bundles.kotlin)
-    implementation(libs.bundles.kotlin.coroutine)
-
-    implementation(libs.bundles.androidx.base)
-    implementation(libs.bundles.androidx.lifecycle)
-    implementation(libs.bundles.androidx.navigation)
-    implementation(libs.bundles.compose)
-
-    implementation(project(":core"))
+    implementation(project(":domain"))
+    implementation(project(":presentation:deeplink"))
 }

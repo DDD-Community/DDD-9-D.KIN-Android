@@ -46,10 +46,10 @@ kotlinx-coroutines-test = { group = "org.jetbrains.kotlinx", name = "kotlinx-cor
 kotlinx-serialization = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-json", version = "1.5.1" }
 
 #AndroidX
-androidx-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "ktx" }
+androidx-ktx = { module = "androidx.core:core-ktx", version.ref = "ktx" }
+androidx-appcompat = { module = "androidx.appcompat:appcompat", version.ref = "appCompat" }
 androidx-activity = { module = "androidx.activity:activity-ktx", version.ref = "activity" }
 androidx-fragment = { module = "androidx.fragment:fragment-ktx", version.ref = "fragment" }
-androidx-appcompat = { module = "androidx.appcompat:appcompat", version.ref = "appCompat" }
 androidx-constraintLayout = { module = "androidx.constraintlayout:constraintlayout", version = "2.1.4" }
 androidx-recyclerView = { module = "androidx.recyclerview:recyclerview", version.ref = "recyclerView" }
 androidx-startup = { module = "androidx.startup:startup-runtime", version.ref = "startup" }
@@ -74,8 +74,8 @@ androidx-navigation-fragment = { group = "androidx.navigation", name = "navigati
 androidx-navigation-runtime = { group = "androidx.navigation", name = "navigation-runtime-ktx", version.ref = "navigation" }
 
 #Lifecycle
-androidx-lifecycle-viewmodel = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-ktx", version.ref = "lifecycle" }
 androidx-lifecycle-runtime = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycle" }
+androidx-lifecycle-viewmodel = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-ktx", version.ref = "lifecycle" }
 androidx-lifecycle-savedstate = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-savedstate", version.ref = "lifecycle" }
 
 #OkHttp
@@ -141,8 +141,8 @@ androidx-base = [
 ]
 
 androidx-lifecycle = [
-    "androidx-lifecycle-viewmodel",
     "androidx-lifecycle-runtime",
+    "androidx-lifecycle-viewmodel",
     "androidx-lifecycle-savedstate"
 ]
 

@@ -14,8 +14,8 @@ android {
 dependencies {
     implementation(project(":domain"))
 
-    implementation(libs.bundles.kotlin)
-    implementation(libs.bundles.kotlin.coroutine)
     implementation(libs.bundles.okhttp)
     implementation(libs.bundles.retrofit)
+
+    implementation(libs.auth0.android)
 }

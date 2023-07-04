@@ -11,3 +11,7 @@ compileKotlin {
         jvmTarget = JavaVersion.VERSION_1_8.toString()
     }
 }
+
+dependencies {
+    implementation(libs.bundles.kotlin)
+}

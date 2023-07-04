@@ -15,3 +15,5 @@
 local.properties
 .idea
 **/*/bin
+*/build
+**/build

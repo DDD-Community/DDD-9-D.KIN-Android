@@ -1,4 +1,4 @@
-package com.dkin.chevit.core
+package com.dkin.chevit.core.base
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope

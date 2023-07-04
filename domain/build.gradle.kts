@@ -3,10 +3,5 @@ plugins {
     alias(libs.plugins.org.jetbrains.kotlin.jvm)
 }
 
-apply(from = project.rootProject.file("gradle-scripts/java.gradle"))
+apply(from = project.rootProject.file("gradle-scripts/kotlin.gradle"))
 apply(from = project.rootProject.file("gradle-scripts/serialization.gradle"))
-
-dependencies {
-    implementation(libs.bundles.kotlin)
-    implementation(libs.bundles.kotlin.coroutine)
-}

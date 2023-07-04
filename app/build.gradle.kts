@@ -37,10 +37,10 @@ dependencies {
     implementation(project(":core"))
     implementation(project(":domain"))
     implementation(project(":data"))
+    implementation(project(":presentation:deeplink"))
+    implementation(project(":presentation:splash"))
     implementation(project(":presentation:auth"))
     implementation(project(":presentation:home"))
-
-    implementation(libs.auth0.android)
 
     implementation(libs.androidx.startup)
 }

@@ -1,4 +1,4 @@
-package com.dkin.chevit.core
+package com.dkin.chevit.core.base
 
 import android.os.Bundle
 import android.view.LayoutInflater

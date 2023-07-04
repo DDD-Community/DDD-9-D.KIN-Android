@@ -9,11 +9,3 @@ apply(from = project.rootProject.file("gradle-scripts/base.gradle"))
 android {
     namespace = "com.dkin.chevit.core"
 }
-
-dependencies {
-    implementation(libs.bundles.kotlin)
-    implementation(libs.bundles.kotlin.coroutine)
-
-    implementation(libs.bundles.androidx.base)
-    implementation(libs.bundles.androidx.lifecycle)
-}
