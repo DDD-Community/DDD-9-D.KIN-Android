@@ -27,7 +27,7 @@ hiltExt = "1.0.0"
 dagger = "2.44"
 
 # Network
-okhttp = "4.10.0"
+okhttp = "4.11.0"
 retrofit = "2.9.0"
 
 # Auth
