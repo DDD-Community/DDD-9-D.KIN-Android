@@ -24,7 +24,7 @@ compose-bom = "2023.04.01"
 # DI
 hilt = "2.46.1"
 hiltExt = "1.0.0"
-dagger = "2.44"
+dagger = "2.46.1"
 
 # Network
 okhttp = "4.11.0"
