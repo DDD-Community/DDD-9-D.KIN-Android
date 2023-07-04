@@ -1,6 +1,6 @@
 [versions]
 # Plugin
-ksp = "1.8.10-1.0.9"
+ksp = "1.8.22-1.0.11"
 androidGradlePlugin = "8.0.2"
 
 # Kotlin
