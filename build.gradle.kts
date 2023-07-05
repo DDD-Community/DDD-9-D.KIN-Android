@@ -11,5 +11,9 @@ plugins {
 
     alias(libs.plugins.com.google.dagger.hilt) apply false
     alias(libs.plugins.com.androidx.navigation.safeArgs) apply false
+
+    alias(libs.plugins.google.services) apply false
+    alias(libs.plugins.firebase.crashlytics) apply false
+    alias(libs.plugins.firebase.performance) apply false
 }
 true

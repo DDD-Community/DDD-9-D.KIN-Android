@@ -9,6 +9,7 @@ apply(from = project.rootProject.file("gradle-scripts/compose.gradle"))
 apply(from = project.rootProject.file("gradle-scripts/hilt.gradle"))
 apply(from = project.rootProject.file("gradle-scripts/serialization.gradle"))
 apply(from = project.rootProject.file("gradle-scripts/navigation.gradle"))
+apply(from = project.rootProject.file("gradle-scripts/firebase.gradle"))
 
 android {
     namespace = "com.dkin.chevit.app"
