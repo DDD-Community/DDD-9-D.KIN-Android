@@ -14,6 +14,7 @@ import dagger.hilt.android.AndroidEntryPoint
 class MainActivity : BaseActivity<ActivityMainBinding>(ActivityMainBinding::inflate) {
     private val topLevelPage = setOf(
         com.dkin.chevit.presentation.splash.R.id.splash,
+        com.dkin.chevit.presentation.auth.R.id.auth,
         com.dkin.chevit.presentation.home.R.id.home,
     )
     private val appBarConfiguration by lazy {
