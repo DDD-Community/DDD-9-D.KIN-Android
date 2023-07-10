@@ -4,7 +4,7 @@ ksp = "1.8.10-1.0.9"
 androidGradlePlugin = "8.0.2"
 
 # Kotlin
-kotlin = "1.8.10"
+kotlin = "1.9.0"
 coroutines = "1.7.2"
 
 # AndroidX
