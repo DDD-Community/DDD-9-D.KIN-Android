@@ -16,6 +16,7 @@ jobs:
     steps:
       - name: CodeReview
         uses: anc95/ChatGPT-CodeReview@main
+        timeout-minutes: 1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}

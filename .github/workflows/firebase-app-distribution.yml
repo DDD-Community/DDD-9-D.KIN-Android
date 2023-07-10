@@ -1,0 +1,48 @@
+name: firebase-app-distribution
+
+on:
+  push:
+    branches:
+      - develop
+
+jobs:
+  build:
+    name: Firebase App Distribution
+    runs-on: ubuntu-latest
+    steps:
+    - name: Git Checkout
+      uses: actions/checkout@v3
+    
+    - name: Setup For Build
+      uses: ./.github/actions/setup
+      with:
+        google-services: ${{ secrets.GOOGLE_SERVICES }}
+        keystore: ${{ secrets.KEYSTORE }}
+        keystore-properties: ${{ secrets.KEYSTORE_PROPERTY }}
+
+    - name: Build with Gradle
+      uses: gradle/gradle-build-action@v2
+      timeout-minutes: 10
+      with:
+        arguments: :app:assembleDebug
+
+    - name: Setup OutputFileName
+      run: |
+        filename=$(find ./ -type f -name "*.apk" -print -quit)
+        echo "OUTPUT_FILE_NAME=$filename" >> $GITHUB_ENV
+        echo $OUTPUT_FILE_NAME
+
+    - name: Create Firebase Credentials
+      run: |
+        echo -n "${{ secrets.FIREBASE_CREDENTIALS }}" | base64 --decode > firebase_credentials.json
+
+    - name: Upload App Artifact To Firebase App Distribution
+      uses: wzieba/Firebase-Distribution-Github-Action@master
+      timeout-minutes: 1
+      with:
+        releaseNotes: "[${{ github.run_number }}] : ${{github.event.head_commit.message}}"
+        appId: ${{ secrets.FIREBASE_APP_ID }}
+        serviceCredentialsFile: ./firebase_credentials.json
+        groups: dev
+        file: ${{ env.OUTPUT_FILE_NAME }}
+        debug: true
