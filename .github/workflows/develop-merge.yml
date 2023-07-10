@@ -17,6 +17,8 @@ jobs:
       uses: ./.github/actions/setup
       with:
         google-services: ${{ secrets.GOOGLE_SERVICES }}
+        keystore: ${{ secrets.KEYSTORE }}
+        keystore-properties: ${{ secrets.KEYSTORE_PROPERTY }}
 
     - name: Build with Gradle
       uses: gradle/gradle-build-action@v2
