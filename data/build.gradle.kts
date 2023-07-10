@@ -17,5 +17,6 @@ dependencies {
     implementation(libs.bundles.okhttp)
     implementation(libs.bundles.retrofit)
 
-    implementation(libs.auth0.android)
+    implementation(platform(libs.firebase.bom))
+    implementation(libs.firebase.auth)
 }

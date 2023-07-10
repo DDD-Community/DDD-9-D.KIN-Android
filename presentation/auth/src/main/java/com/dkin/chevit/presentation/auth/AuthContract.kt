@@ -5,7 +5,10 @@ import com.dkin.chevit.core.mvi.ViewIntent
 import com.dkin.chevit.core.mvi.ViewState
 
 sealed interface AuthIntent : ViewIntent {
-    object ClickedSignIn : AuthIntent
+    object SignInSuccess : AuthIntent
+
+    @JvmInline
+    value class SignInFailure(val throwable: Throwable) : AuthIntent
 }
 
 object AuthState : ViewState

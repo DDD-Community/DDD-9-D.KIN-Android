@@ -1,3 +1,6 @@
+import java.io.FileInputStream
+import java.util.Properties
+
 @Suppress("DSL_SCOPE_VIOLATION") // TODO: Remove once KTIJ-19369 is fixed
 plugins {
     alias(libs.plugins.com.android.application)
@@ -18,13 +21,28 @@ android {
         applicationId = "com.dkin.chevit"
         versionCode = 1
         versionName = "1.0"
-
-        manifestPlaceholders["auth0Domain"] = "team-d-kin.jp.auth0.com"
-        manifestPlaceholders["auth0Scheme"] = "chevit"
     }
-
+    signingConfigs {
+        register("release") {
+            Properties().apply {
+                load(FileInputStream(rootProject.file("keystore.properties")))
+            }.run {
+                storeFile = file(getProperty("storeFile"))
+                storePassword = getProperty("storePassword")
+                keyAlias = getProperty("keyAlias")
+                keyPassword = getProperty("keyPassword")
+            }
+        }
+    }
     buildTypes {
+        debug {
+            isDebuggable = true
+            isMinifyEnabled = false
+            isShrinkResources = false
+            signingConfig = signingConfigs.getByName("release")
+        }
         release {
+            signingConfig = signingConfigs.getByName("release")
             isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
@@ -38,6 +56,7 @@ dependencies {
     implementation(project(":core"))
     implementation(project(":domain"))
     implementation(project(":data"))
+    implementation(project(":presentation:common"))
     implementation(project(":presentation:deeplink"))
     implementation(project(":presentation:splash"))
     implementation(project(":presentation:auth"))

@@ -18,3 +18,5 @@ local.properties
 */build
 **/build
 app/google-services.json
+*.jks
+keystore.properties

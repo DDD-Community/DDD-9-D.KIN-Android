@@ -17,5 +17,10 @@ android {
 dependencies {
     implementation(project(":core"))
     implementation(project(":domain"))
+    implementation(project(":presentation:common"))
     implementation(project(":presentation:deeplink"))
+
+    implementation(platform(libs.firebase.bom))
+    implementation(libs.firebase.auth)
+    implementation(libs.playservices.auth)
 }
